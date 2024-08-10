@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.bl {
+  border-left: 0 !important;
+}
+.br {
+  border-right: 0 !important;
+}
+.bt {
+  border-top: 0 !important;
+}
+.bb {
+  border-bottom: 0 !important;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navigation {
+  background-color: purple;
+  width: 100%;
+  height: 40%;
+  text-align: center;
+}
+.navigation h1 {
+  margin: 40px;
+}
+.holder {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+}
+.box {
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vh;
+  font-weight: bolder;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 50px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.info button {
+  margin-top: 30px;
+  width: 100px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.info img {
+  display: none;
+}
+
+.info button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    red,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  z-index: -1;
+  border-radius: inherit;
+  background-size: 300%;
+  animation: gradient 3s linear infinite;
+}
+
+.info button:hover::before {
+  animation-duration: 1.5s;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.info button::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-color: black;
+  z-index: -1;
+  border-radius: 30px;
+}
